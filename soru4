@@ -1,0 +1,20 @@
+fun main() {
+    print("Lütfen bir harf giriniz= ")
+    val input = readLine()
+
+    if (input != null && input.length == 1) {
+        val letter = input[0].toLowerCase()
+
+        if (letter in 'a'..'z') {
+            if (letter in setOf('a', 'e', 'i', 'o', 'u')) {
+                println("$letter bir seslidir")
+            } else {
+                println("$letter bir sessizdir")
+            }
+        } else {
+            println("Yanlış giriş,Tekrar deneyiniz")
+        }
+    } else {
+        println("Yanlış giriş,Tekrar deneyiniz.")
+    }
+}
